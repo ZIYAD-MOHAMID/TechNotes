@@ -1,15 +1,23 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Welcome = () => {
-  const date = new Date();
-  const today = new Intl.DateTimeFormat("en-US", {
-    dateStyle: "full",
-    timeStyle: "long",
-  }).format(date);
+  const [time, setTime] = useState(new Date());
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTime(new Date());
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   const content = (
     <section className="welcome">
-      <p>{today}</p>
+      <p>
+        {new Intl.DateTimeFormat("ar-EG", {
+          dateStyle: "full",
+          timeStyle: "long",
+        }).format(time)}
+      </p>
 
       <h1>Welcome!</h1>
 
