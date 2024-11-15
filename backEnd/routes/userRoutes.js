@@ -1,9 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const usersController = require("../controllers/usersController");
-const verifyJWT = require("../controllers/verifyJWT");
+const usersController = require("../controllers/usersController.js");
+const verifyJWT = require("../middleware/verifyJWT.js");
 
-router.use(verifyJWT);
+// router.use(verifyJWT);
 
 router
   .route("/")
