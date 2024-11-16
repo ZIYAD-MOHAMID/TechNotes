@@ -18,7 +18,7 @@ import { ROLES } from "./config/roles";
 import useTitle from "./hooks/useTitle.js";
 
 function App() {
-  useTitle("Ziad M. repire");
+  useTitle("Ziad M. Repire");
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
