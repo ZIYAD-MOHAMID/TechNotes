@@ -6,6 +6,7 @@ import { setCredentials } from "./authSlice";
 import { useLoginMutation } from "./authApiSlice";
 
 import usePersist from "../../hooks/usePersist.js";
+import PulseLoader from "react-spinners/PulseLoader.js";
 
 const Login = () => {
   const userRef = useRef();
@@ -13,7 +14,7 @@ const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [errMsg, setErrMsg] = useState("");
-  const [persist, setPersist] = useState();
+  const [persist, setPersist] = usePersist();
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -50,9 +51,9 @@ const Login = () => {
 
   const handleUserInput = (e) => setUsername(e.target.value);
   const handlePwdInput = (e) => setPassword(e.target.value);
-  const handleToggle = () => setPassword((perv) => !perv);
+  const handleToggle = () => setPersist((perv) => !perv);
   const errClass = errMsg ? "errmsg" : "offscreen";
-  if (isLoading) return <p>Loading...</p>;
+  if (isLoading) return <PulseLoader color={"#FFF"} />;
 
   const content = (
     <section className="public">
