@@ -1,5 +1,5 @@
 const allowedOrigins = [
-  "https://www.technotes.onrender.com",
+  "https://tech-notes-fo1w.vercel.app/",
   "http://localhost:3000",
 ];
 
