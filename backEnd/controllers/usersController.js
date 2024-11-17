@@ -21,10 +21,10 @@ const getAllUsers = async (req, res) => {
 // @route POST /users
 // @access Private
 const createNewUser = async (req, res) => {
-  const { username, password, roles } = req.body;
+  const { username, email, password, roles } = req.body;
 
   // Confirm data
-  if (!username || !password) {
+  if (!username || !password || !email) {
     return res.status(400).json({ message: "All fields are required" });
   }
 
@@ -43,8 +43,8 @@ const createNewUser = async (req, res) => {
 
   const userObject =
     !Array.isArray(roles) || !roles.length
-      ? { username, password: hashedPwd }
-      : { username, password: hashedPwd, roles };
+      ? { username, email, password: hashedPwd }
+      : { username, email, password: hashedPwd, roles };
 
   // Create and store new user
   const user = await User.create(userObject);
