@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useRegisterMutation } from "../auth/authApiSlice.js";
+import { useRegisterMutation } from "./authApiSlice.js";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSave } from "@fortawesome/free-solid-svg-icons";

@@ -1,20 +1,20 @@
 import { Routes, Route } from "react-router-dom";
-import Layout from "./components/Layout";
-import Public from "./components/Public";
-import Login from "./features/auth/Login";
+import Layout from "./components/Layout.js";
+import Public from "./components/Public.js";
+import Login from "./features/auth/Login.js";
 import Register from "./features/auth/Register.js";
-import DashLayout from "./components/DashLayout";
-import Welcome from "./features/auth/Welcome";
-import NotesList from "./features/notes/NotesList";
-import UsersList from "./features/users/UsersList";
-import NewUserForm from "./features/users/NewUserForm";
-import NewNote from "./features/notes/NewNote";
-import EditNote from "./features/notes/EditNote";
-import EditUser from "./features/users/EditUser";
-import Prefetch from "./features/auth/Prefetch";
-import PersistLogin from "./features/auth/PersistLogin";
+import DashLayout from "./components/DashLayout.js";
+import Welcome from "./features/auth/Welcome.js";
+import NotesList from "./features/notes/NotesList.js";
+import UsersList from "./features/users/UsersList.js";
+import NewUserForm from "./features/users/NewUserForm.js";
+import NewNote from "./features/notes/NewNote.js";
+import EditNote from "./features/notes/EditNote.js";
+import EditUser from "./features/users/EditUser.js";
+import Prefetch from "./features/auth/Prefetch.js";
+import PersistLogin from "./features/auth/PersistLogin.js";
 import RequireAuth from "./features/auth/RequireAuth.js";
-import { ROLES } from "./config/roles";
+import { ROLES } from "./config/roles.js";
 import useTitle from "./hooks/useTitle.js";
 
 function App() {
