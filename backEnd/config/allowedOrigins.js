@@ -1,6 +1,3 @@
-const allowedOrigins = [
-  "https://tech-notes-fo1w.vercel.app/",
-  "http://localhost:3000",
-];
+const allowedOrigins = [process.env.FRONT_URL, "http://localhost:3000"];
 
 module.exports = allowedOrigins;
